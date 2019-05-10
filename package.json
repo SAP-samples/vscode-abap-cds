@@ -1,0 +1,25 @@
+{
+    "name": "cds",
+    "displayName": "ddls.asddls",
+    "description": "CDS view",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.33.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "cds",
+            "aliases": ["CDS", "cds"],
+            "extensions": ["asddls","asdcls"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "cds",
+            "scopeName": "source.cds",
+            "path": "./syntaxes/cds.tmLanguage.json"
+        }]
+    }
+}

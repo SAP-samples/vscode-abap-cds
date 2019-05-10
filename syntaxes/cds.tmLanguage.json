@@ -1,0 +1,136 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "CDS",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#annotations"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#enums"
+		},
+		{
+			"include": "#booleans"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#numbers"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.other.cds",
+					"match": "\\b(association|annotation|annotate|define|extend|view|as|select|from|key|where|select|distinct|with|parameters|inner|outer|left|right|join|on|group|by|having|union|all|define|table|function|implemented|method|returns|and|or|case|when|then|else|end|to|one|is|null|preserving|type|default|array|of|role|grant|inherit|aspect)\\b"
+				}
+			]
+		},
+		"functions": {
+			"patterns": [
+				{
+					"name": "entity.name.function.cds",
+					"match": "\\b(abs|cast|ceil|div|division|floor|mod|round|concat|concat_with_space|instr|left|length|lpad|lower|ltrim|replace|right|rpad|rtrim|substring|upper|bintohex|hextobin|coalesce|fltp_to_dec|unit_conversion|currency_conversion|decimal_shift|dats_is_valid|dats_days_between|dats_add_days|dats_add_months|tims_is_valid|tstmp_is_valid|tstmp_current_utctimestamp|tstmp_seconds_between|tstmp_add_seconds|abap_system_timezone|abap_user_timezone|tstmp_to_dats|tstmp_to_tims|tstmp_to_dst|dats_tims_to_tstmp)\\("
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.single.cds",
+			"begin": "\\'",
+			"end": "\\'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.cds",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.block.cs",
+					"begin": "/\\*",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.cs"
+						}
+					},
+					"end": "\\*/",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.cs"
+						}
+					}
+				},
+				{
+					"name": "comment.line.double-slash.cs",
+					"begin": "(?<!/)//(?:(?!/)|(?=//))",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.cs"
+						}
+					},
+					"end": "(?=$)"
+				}
+			]
+		},
+		"annotations": {
+			"patterns": [
+				{
+					"begin": "(@\\<?)",
+					"beginCaptures": {
+						"1": {
+							"name": "comment.line.annotation.symbol.cds"
+						}
+					},
+					"end": ":|\\n",
+					"patterns": [
+						{
+							"match": "\\.?([a-zA-Z//][a-zA-Z//_0-9]+)\\.?",
+							"captures": {
+								"1": {
+									"name": "comment.line.annotation.property.cds"
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		"enums": {
+			"patterns": [
+				{
+					"name": "support.variable.cds",
+					"match": "\\#[a-zA-Z_]+"
+				}
+			]
+		},
+		"booleans": {
+			"patterns": [
+				{
+					"name": "constant.language.boolean.cds",
+					"match": "(true|false)"
+				}
+			]
+		}, 
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric.cds",
+					"match": "[0-9]+"
+				}
+			]
+		}
+	},
+	"scopeName": "source.cds"
+}

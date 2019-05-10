@@ -1,2 +1,4 @@
-# vscode-cds-highlighting
-Syntax highlighting for CDS views
+# cds README
+
+Syntax highlighting for CDS views and annotations
+
