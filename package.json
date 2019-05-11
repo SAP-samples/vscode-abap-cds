@@ -1,7 +1,7 @@
 {
     "name": "cds",
-    "displayName": "ddls.asddls",
-    "description": "CDS view",
+    "displayName": "CDS syntax highlighting",
+    "description": "Syntax highlighting for CDS views",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.33.0"
@@ -21,5 +21,9 @@
             "scopeName": "source.cds",
             "path": "./syntaxes/cds.tmLanguage.json"
         }]
+    },
+    "publisher": "hudakf",
+    "repository": {
+        "url": "https://github.com/FreHu/vscode-cds-highlighting"
     }
 }
