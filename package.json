@@ -2,7 +2,7 @@
     "name": "cds",
     "displayName": "CDS syntax highlighting",
     "description": "Syntax highlighting for CDS views",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "engines": {
         "vscode": "^1.33.0"
     },
@@ -10,17 +10,27 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "cds",
-            "aliases": ["CDS", "cds"],
-            "extensions": ["asddls","asdcls"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "cds",
-            "scopeName": "source.cds",
-            "path": "./syntaxes/cds.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "cds",
+                "aliases": [
+                    "CDS",
+                    "cds"
+                ],
+                "extensions": [
+                    "asddls",
+                    "asdcls"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "cds",
+                "scopeName": "source.cds",
+                "path": "./syntaxes/cds.tmLanguage.json"
+            }
+        ]
     },
     "publisher": "hudakf",
     "repository": {
