@@ -2,7 +2,7 @@
     "name": "cds",
     "displayName": "CDS syntax highlighting",
     "description": "Syntax highlighting for CDS views",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "engines": {
         "vscode": "^1.33.0"
     },
