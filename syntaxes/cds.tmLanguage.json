@@ -58,26 +58,26 @@
 		"comments": {
 			"patterns": [
 				{
-					"name": "comment.block.cs",
+					"name": "comment.block.cds",
 					"begin": "/\\*",
 					"beginCaptures": {
 						"0": {
-							"name": "punctuation.definition.comment.cs"
+							"name": "punctuation.definition.comment.cds"
 						}
 					},
 					"end": "\\*/",
 					"endCaptures": {
 						"0": {
-							"name": "punctuation.definition.comment.cs"
+							"name": "punctuation.definition.comment.cds"
 						}
 					}
 				},
 				{
-					"name": "comment.line.double-slash.cs",
+					"name": "comment.line.double-slash.cds",
 					"begin": "(?<!/)//(?:(?!/)|(?=//))",
 					"beginCaptures": {
 						"0": {
-							"name": "punctuation.definition.comment.cs"
+							"name": "punctuation.definition.comment.cds"
 						}
 					},
 					"end": "(?=$)"
