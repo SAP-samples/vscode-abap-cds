@@ -20,6 +20,7 @@
                 "extensions": [
                     "asddls",
                     "asdcls",
+                    "asddlxs",
                     "cds.abap"
                 ],
                 "configuration": "./language-configuration.json"
