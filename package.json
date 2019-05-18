@@ -1,14 +1,17 @@
 {
     "name": "cds",
-    "displayName": "CDS syntax highlighting",
-    "description": "Syntax highlighting for CDS views",
+    "displayName": "CDS Language Support",
+    "description": "Syntax highlighting and snippets for CDS views",
+    
     "version": "0.4.0",
     "engines": {
         "vscode": "^1.33.0"
     },
     "categories": [
-        "Programming Languages"
+        "Programming Languages",
+        "Snippets"
     ],
+    "icon": "icon.png",
     "contributes": {
         "languages": [
             {
@@ -41,6 +44,6 @@
     },
     "publisher": "hudakf",
     "repository": {
-        "url": "https://github.com/FreHu/vscode-cds-highlighting"
+        "url": "https://github.com/FreHu/vscode-cds"
     }
 }
