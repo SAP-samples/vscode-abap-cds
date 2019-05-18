@@ -1,0 +1,377 @@
+{
+    "Define Generic Aspect": {
+        "prefix": "defineGenericAspect",
+        "body": [
+            "define accesspolicy ${dcl_source_name} {",
+            "\t@EndUserText.label: '${dcl_source_description}'",
+            "\tdefine aspect ${dcl_source_name} as",
+            "\t\tselect from ${cds_entity} with user element ${user_element}",
+            "\t\t{",
+            "\t\t\t${entity_element_1},",
+            "\t\t\t${entity_element_2} bypass when = '${bypass_value}'",
+            "\t\t}",
+            "\t\t$0",
+            "}"
+        ]
+    },
+    "Define Role with Generic Aspect": {
+        "prefix": "defineRoleWithGenericAspect",
+        "body": [
+            "@EndUserText.label: '${dcl_source_description}'",
+            "@MappingRole: true",
+            "define role ${dcl_source_name} {",
+            "\tgrant select on ${cds_entity} where",
+            "\t\t(${entity_element_1}, ${entity_element_2}) = aspect ${aspect_name};",
+            "\t\t$0",
+            "}"
+        ]
+    },
+    "Define Role with Inherited Conditions": {
+        "prefix": "defineRoleWithInheritedConditions",
+        "body": [
+            "@EndUserText.label: '${dcl_source_description}'",
+            "@MappingRole: true",
+            "define role ${dcl_source_name} {",
+            "\tgrant select on ${cds_entity} where",
+            "\t\tinheriting conditions from entity ${cds_source_entity};",
+            "\t\t$0",
+            "}"
+        ]
+    },
+    "Define Role with PFCG Aspect": {
+        "prefix": "defineRoleWithPfcgAspect",
+        "body": [
+            "@EndUserText.label: '${dcl_source_description}'",
+            "@MappingRole: true",
+            "define role ${dcl_source_name} {",
+            "\tgrant select on ${cds_entity} where",
+            "\t(${entity_element_1}, ${entity_element_2}) = aspect pfcg_auth(${authorization_object}, ${authorization_field_1}, ${authorization_field_2}, ${filter_field_1} = '${filter_value_1}');",
+            "\t$0",
+            "}"
+        ]
+    },
+    "Define Role with Privileged Access": {
+        "prefix": "defineRoleWithPrivilegedAccess",
+        "body": [
+            "@EndUserText.label: '${dcl_source_description}'",
+            "@MappingRole: true",
+            "define role ${dcl_source_name} {",
+            "\tgrant select on ${cds_entity} where",
+            "\t\tfalse; $0",
+            "}"
+        ]
+    },
+    "Define Role with SimpleConditions": {
+        "prefix": "defineRoleWithSimpleConditions",
+        "body": [
+            "@EndUserText.label: '${dcl_source_description}'",
+            "@MappingRole: true",
+            "define role ${dcl_source_name} {",
+            "\tgrant select on ${cds_entity} where",
+            "\t\t${entity_element_1} = '${literal_value}'",
+            "\t\tor ${entity_element_2} = aspect user;",
+            "\t$0",
+            "}"
+        ]
+    },
+    "Define Role with Unrestriced Access": {
+        "prefix": "defineRoleWithUnrestricedAccess",
+        "body": [
+            "@EndUserText.label: '${dcl_source_description}'",
+            "@MappingRole: true",
+            "define role ${dcl_source_name} {",
+            "\tgrant select on ${cds_entity}; $0",
+            "}"
+        ]
+    },
+    "Define Annotation": {
+        "prefix": "defineAnnotation",
+        "body": [
+            "@Scope:[#VIEW, #EXTEND_VIEW]",
+            "define annotation ${source_name_editable} {",
+            "\t${name} : ${type}; ",
+            "\t$0",
+            "}"
+        ]
+    },
+    "Define Abstract Entity With Parameters": {
+        "prefix": "defineAbstractEntityWithParameters",
+        "body": [
+            "@EndUserText.label: '${ddl_source_description}'",
+            "define abstract entity ${ddl_source_name_editable} ",
+            "\twith parameters ${parameter_name} : ${parameter_type} {",
+            "\t${element_name} : ${element_type};",
+            "\t$0",
+            "}"
+        ]
+    },
+    "Define Custom Entity With Parameters": {
+        "prefix": "defineCustomEntityWithParameters",
+        "body": [
+            "@EndUserText.label: '${ddl_source_description}'",
+            "define custom entity ${ddl_source_name_editable} ",
+            "with parameters ${parameter_name} : ${parameter_type} {",
+            "\tkey ${key_element_name} : ${key_element_type};",
+            "\t${element_name} : ${element_type};",
+            "\t$0",
+            "}"
+        ],
+        "description": "Define Role with Unrestricted Access"
+    },
+    "Define Hierarch": {
+        "prefix": "defineHierarchy",
+        "body": [
+            "define hierarchy ${ddl_source_name_editable} ",
+            "as parent child hierarchy (",
+            "source ${data_source_name}",
+            "child to parent association ${_association_name}",
+            "start where ${element_name} = ${value}",
+            "siblings order by ${order_by_element_name}",
+            ")",
+            "{",
+            "\t${element_name}",
+            "\t$0",
+            "}"
+        ]
+    },
+    "Define Projection View": {
+        "prefix": "defineProjectionView",
+        "body": [
+            "@EndUserText.label: '${ddl_source_description}'",
+            "@AccessControl.authorizationCheck: #CHECK",
+            "define view entity ${ddl_source_name_editable} as projection on ${data_source_name} {",
+            "\t$0",
+            "}"
+        ]
+    },
+    "Define Table Function with Parameters": {
+        "prefix": "defineTableFunctionWithParameters",
+        "body": [
+            "@EndUserText.label: '${ddl_source_description}'",
+            "define table function ${ddl_source_name_editable}",
+            "with parameters ${parameter_name} : ${parameter_type}",
+            "returns {",
+            "\t${client_element_name} : abap.clnt;",
+            "\t${element_name} : ${element_type};",
+            "\t$0",
+            "}",
+            "implemented by method ${class_name}=>${method_name};"
+        ]
+    },
+    "Define View": {
+        "prefix": "defineView",
+        "body": [
+            "@AbapCatalog.sqlViewName: '${sql_view_name}'",
+            "@AbapCatalog.compiler.compareFilter: true",
+            "@AbapCatalog.preserveKey: true",
+            "@AccessControl.authorizationCheck: #CHECK",
+            "@EndUserText.label: '${ddl_source_description}'",
+            "define view ${ddl_source_name_editable} as select from ${data_source_name} {",
+            "\t$0",
+            "}"
+        ]
+    },
+    "Define View with Association": {
+        "prefix": "defineViewWithAssociation",
+        "body": [
+            "@AbapCatalog.sqlViewName: '${sql_view_name}'",
+            "@AbapCatalog.compiler.compareFilter: true",
+            "@AbapCatalog.preserveKey: true",
+            "@AccessControl.authorizationCheck: #CHECK",
+            "@EndUserText.label: '${ddl_source_description}'",
+            "define view ${ddl_source_name_editable} as select from ${data_source_name}",
+            "association [${1}] to ${target_data_source_name} as ${_association_name}",
+            "on $$projection.${element_name} = ${_association_name}.${target_element_name} {",
+            "\t$0",
+            "\t${_association_name} // Make association public",
+            "}"
+        ]
+    },
+    "Define View with Join": {
+        "prefix": "defineViewWithJoin",
+        "body": [
+            "@AbapCatalog.sqlViewName: '${sql_view_name}'",
+            "@AbapCatalog.compiler.compareFilter: true",
+            "@AbapCatalog.preserveKey: true",
+            "@AccessControl.authorizationCheck: #CHECK",
+            "@EndUserText.label: '${ddl_source_description}'",
+            "define view ${ddl_source_name_editable} as select from ${data_source_name}",
+            "left outer join ${joined_data_source_name}",
+            "on ${data_source_name}.${element_name} = ${joined_data_source_name}.${joined_element_name} {",
+            "\t$0",
+            "}"
+        ]
+    },
+    "Define View with Parameters": {
+        "prefix": "defineViewWithParameters",
+        "body": [
+            "@AbapCatalog.sqlViewName: '${sql_view_name}'",
+            "@AbapCatalog.compiler.compareFilter: true",
+            "@AbapCatalog.preserveKey: true",
+            "@AccessControl.authorizationCheck: #CHECK",
+            "@EndUserText.label: '${ddl_source_description}'",
+            "define view ${ddl_source_name_editable}",
+            "with parameters ${parameter_name} : ${parameter_type}",
+            "as select from ${data_source_name} {",
+            "\t$0",
+            "}"
+        ]
+    },
+    "Define View with Parent Association": {
+        "prefix": "defineViewWithToParentAssociation",
+        "body": [
+            "@AbapCatalog.sqlViewName: '${sql_view_name}'",
+            "@AbapCatalog.compiler.compareFilter: true",
+            "@AbapCatalog.preserveKey: true",
+            "@AccessControl.authorizationCheck: #CHECK",
+            "@EndUserText.label: '${ddl_source_description}'",
+            "define view ${ddl_source_name_editable} as select from ${data_source_name}",
+            "association to parent ${target_data_source_name} as ${_association_name}",
+            "on $$projection.${element_name} = ${_association_name}.${target_element_name} {",
+            "\t$0",
+            "\t${_association_name} // Make association public",
+            "}"
+        ]
+    },
+    "Append Structure": {
+        "prefix": "appendStructure",
+        "body": [
+            "extend type ${appending_structure_name} with ${structure_name} {",
+            "\t$0",
+            "}"
+        ]
+    },
+    "Currency Key": {
+        "prefix": "currencyKey",
+        "body": [
+            "@Semantics.amount.currencyCode: '${structure_name}.${currency_key}'",
+            "${amount}       : abap.curr(${length}, ${decimals});",
+            "${currency_key} : abap.cuky; "
+        ]
+    },
+    "Enhancement Category": {
+        "prefix": "enhancementCategory",
+        "body": [
+            "@AbapCatalog.enhancementCategory: #${enhancement_category}"
+        ]
+    },
+    "Foreign Key": {
+        "prefix": "foreignKey",
+        "body": [
+            "with foreign key ${key_table}",
+            "where ${table_field_1} = syst.mandt and",
+            "${table_field_2} = ${structure_name}.${structure_field};"
+        ]
+    },
+    "Include Structure": {
+        "prefix": "includeStructure",
+        "body": [
+            "include ${other_structure_name};"
+        ]
+    },
+    "New Component Data Element": {
+        "prefix": "newComponentDataElement",
+        "body": [
+            "${component_name} : ${data_element};"
+        ]
+    },
+    "New Component Predefined Type": {
+        "prefix": "newComponentPredefinedType",
+        "body": [
+            "${component_name} : abap.${type}(${length}, ${decimals});"
+        ]
+    },
+    "Quantity Unit": {
+        "prefix": "quantityUnit",
+        "body": [
+            "@Semantics.quantity.unitOfMeasure: '${structure_name}.${unit}'",
+            "${quantity} : abap.quan(${quantity_length}, ${decimals});",
+            "${unit} : abap.unit(${unit_length});"
+        ]
+    },
+    "Search Help": {
+        "prefix": "searchHelp",
+        "body": [
+            "with value help ${search_help_name}",
+            "where ${search_help_field_1} = ${structure_name}.${structure_field} and",
+            "${search_help_field_2} = '${constant}';"
+        ]
+    },
+    "Short Description": {
+        "prefix": "shortDescription",
+        "body": [
+            "@EndUserText.label: '${description}'"
+        ]
+    },
+    "Annotate Entity": {
+        "prefix": "annotateEntity",
+        "body": [
+            "@Metadata.layer: ${layer}",
+            "annotate entity ${entity_name}",
+            "with ",
+            "{",
+            "\t${element_name};",
+            "\t$0",
+            "}"
+        ]
+    },
+    "Annotate Entity with Parameters": {
+        "prefix": "annotateEntityWithParameters",
+        "body": [
+            "@Metadata.layer: ${layer}",
+            "annotate entity ${entity_name}",
+            "with parameters",
+            "${parameter_name}",
+            "{",
+            "\t${element_name};",
+            "\t$0",
+            "}"
+        ]
+    },
+    "Annotate View": {
+        "prefix": "annotateView",
+        "body": [
+            "@Metadata.layer: ${layer}",
+            "annotate view ${view_name} with ",
+            "{",
+            "\t${element_name};",
+            "\t$0",
+            "}"
+        ]
+    },
+    "Annotate View with Parameters": {
+        "prefix": "annotateViewWithParameters",
+        "body": [
+            "@Metadata.layer: ${layer}",
+            "annotate view ${view_name}",
+            "with parameters",
+            "${parameter_name}",
+            "{",
+            "\t${element_name};",
+            "\t$0",
+            "}"
+        ]
+    },
+    "Define Dynamic Cache": {
+        "prefix": "defineDynamicCache",
+        "body": [
+            "define dynamic cache ${source_name_editable} on ${database_table_name}",
+            "{",
+            "\t$0",
+            "}",
+            "//where ${where_condition}",
+            "//segregate cache data by ${filter_condition}",
+            "//creation configurable default ${off}"
+        ]
+    },
+    "Service Definition": {
+        "prefix": "defineService",
+        "body": [
+            "@EndUserText.label: '${source_description}'",
+            "define service ${source_name_editable} {",
+            "\texpose ${entity_name}; ",
+            "\t$0",
+            "}"
+        ]
+    }
+}

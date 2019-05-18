@@ -31,6 +31,12 @@
                 "scopeName": "source.cds",
                 "path": "./syntaxes/cds.tmLanguage.json"
             }
+        ],
+        "snippets": [
+            {
+                "language": "cds",
+                "path": "./snippets/cds.json"
+            }
         ]
     },
     "publisher": "hudakf",
