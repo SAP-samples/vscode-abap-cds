@@ -35,13 +35,13 @@
         ],
         "snippets": [
             {
-                "language": "ABAP CDS",
+                "language": "abap_cds",
                 "path": "./snippets/cds.json"
             }
         ]
     },
     "publisher": "hudakf",
     "repository": {
-        "url": "https://github.com/FreHu/vscode-cds"
+        "url": "https://github.com/FreHu/vscode-abap-cds"
     }
 }
