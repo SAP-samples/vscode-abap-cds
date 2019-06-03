@@ -16,7 +16,7 @@
             {
                 "id": "abap_cds",
                 "aliases": [
-                    "ABPAP CDS"
+                    "ABAP CDS"
                 ],
                 "extensions": [
                     "asddls",
@@ -28,7 +28,7 @@
         ],
         "grammars": [
             {
-                "language": "ABAP CDS",
+                "language": "abap_cds",
                 "scopeName": "source.abapcds",
                 "path": "./syntaxes/cds.tmLanguage.json"
             }
