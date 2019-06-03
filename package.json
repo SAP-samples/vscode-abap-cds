@@ -1,7 +1,7 @@
 {
     "name": "cds",
-    "displayName": "CDS Language Support",
-    "description": "Syntax highlighting and snippets for CDS views",
+    "displayName": "ABAP CDS Language Support",
+    "description": "Syntax highlighting and snippets for ABAP CDS views",
     "version": "0.5.0",
     "engines": {
         "vscode": "^1.33.0"
@@ -14,10 +14,9 @@
     "contributes": {
         "languages": [
             {
-                "id": "cds",
+                "id": "abap_cds",
                 "aliases": [
-                    "CDS",
-                    "cds"
+                    "ABPAP CDS"
                 ],
                 "extensions": [
                     "asddls",
@@ -29,14 +28,14 @@
         ],
         "grammars": [
             {
-                "language": "cds",
+                "language": "ABAP CDS",
                 "scopeName": "source.cds",
                 "path": "./syntaxes/cds.tmLanguage.json"
             }
         ],
         "snippets": [
             {
-                "language": "cds",
+                "language": "ABAP CDS",
                 "path": "./snippets/cds.json"
             }
         ]

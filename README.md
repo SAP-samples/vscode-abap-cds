@@ -3,7 +3,7 @@
 
 ## Description
 
-Language support for CDS views. Includes syntax higlighting and code snippets.
+Language support for ABAP CDS views. Includes syntax higlighting and code snippets.
 
 ![sample screenshot](screenshot.png)
 
