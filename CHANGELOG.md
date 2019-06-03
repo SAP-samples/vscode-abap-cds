@@ -1,6 +1,6 @@
 # Change Log
 
-## [0.5.1]
+## [0.6]
 - Clarified that this is ABAP CDS, not CAP CDS
 
 ## [0.5]

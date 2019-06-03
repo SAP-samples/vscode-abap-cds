@@ -1,9 +1,11 @@
-# Vscode-CDS
+# Vscode-ABAP-CDS
 
 
 ## Description
 
 Language support for ABAP CDS views. Includes syntax higlighting and code snippets.
+
+If you're looking for [CAP CDS](https://github.wdf.sap.corp/pages/cap/cds/), you won't find it in the marketplace yet. However, you can download it as a .vsix from [here](https://tools.hana.ondemand.com/#hanatools)
 
 ![sample screenshot](screenshot.png)
 
@@ -25,13 +27,13 @@ If you want to customize the token colors, add an `editor.tokenColorCustomizatio
       "[Default Dark+]": {
         "textMateRules": [
           {
-            "scope": "comment.line.annotation.symbol.cds",
+            "scope": "comment.line.annotation.symbol.abapcds",
             "settings": {
               "foreground": "#40c386"
             }
           },
           {
-            "scope": "comment.line.annotation.property.cds",
+            "scope": "comment.line.annotation.property.abapcds",
             "settings": {
               "foreground": "#bbbda0"
             }
@@ -43,7 +45,7 @@ If you want to customize the token colors, add an `editor.tokenColorCustomizatio
 
 ## Known issues
 
-The highlighting grammar is a very simplified version of the CDS language structure. Therefore, some names which are identical to keywords can get keyword higlighting, because the grammar cannot tell them apart.
+The highlighting grammar is a very simplified version of the ABAP CDS language structure. Therefore, some names which are identical to keywords can get keyword higlighting, because the grammar cannot tell them apart.
 
 ## How to obtain support
 

@@ -1,5 +1,5 @@
 {
-    "name": "cds",
+    "name": "abap-cds",
     "displayName": "ABAP CDS Language Support",
     "description": "Syntax highlighting and snippets for ABAP CDS views",
     "version": "0.6.0",
@@ -29,7 +29,7 @@
         "grammars": [
             {
                 "language": "ABAP CDS",
-                "scopeName": "source.cds",
+                "scopeName": "source.abapcds",
                 "path": "./syntaxes/cds.tmLanguage.json"
             }
         ],
