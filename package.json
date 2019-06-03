@@ -1,5 +1,5 @@
 {
-    "name": "abap-cds",
+    "name": "cds",
     "displayName": "ABAP CDS Language Support",
     "description": "Syntax highlighting and snippets for ABAP CDS views",
     "version": "0.6.3",
