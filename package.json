@@ -2,7 +2,7 @@
     "name": "cds",
     "displayName": "ABAP CDS Language Support",
     "description": "Syntax highlighting and snippets for ABAP CDS views",
-    "version": "0.6.5",
+    "version": "0.6.6",
     "engines": {
         "vscode": "^1.33.0"
     },
