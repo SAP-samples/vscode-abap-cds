@@ -58,4 +58,4 @@ Small pull requests are welcome. Describe your change in the pull request. You w
 ## License
 
 Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
-This file is licensed under the SAP Sample Code License except as noted otherwise in the [LICENSE](license.md) file.
+This file is licensed under the SAP Sample Code License except as noted otherwise in the [LICENSE](LICENSE) file.
