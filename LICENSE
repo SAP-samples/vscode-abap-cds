@@ -1,3 +1,5 @@
+The following license applies to the contents of the folder 'snippets':
+
 SAP SAMPLE CODE LICENSE AGREEMENT
 
 Please scroll down and read the following SAP Sample Code License Agreement carefully ("Agreement").  By downloading, installing, or otherwise using the SAP sample code or any materials that accompany the sample code documentation (collectively, the "Sample Code"), You agree that this Agreement forms a legally binding agreement between You ("You" or "Your") and SAP SE, for and on behalf of itself and its subsidiaries and affiliates (as defined in Section 15 of the German Stock Corporation Act), and You agree to be bound by all of the terms and conditions stated in this Agreement. If You are trying to access or download the Sample Code on behalf of Your employer or as a consultant or agent of a third party (either "Your Company"), You represent and warrant that You have the authority to act on behalf of and bind Your Company to the terms of this Agreement and everywhere in this Agreement that refers to 'You' or 'Your' shall also include Your Company. If You do not agree to these terms, do not attempt to access or use the Sample Code.
@@ -39,3 +41,32 @@ b)  If You are located in the US or Canada: This Agreement shall be governed by 
 
 
 v1.0-071618
+
+-------------------------------------------------------------------
+
+The following license applies to the contents of the folder 'syntaxes':
+
+This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the public domain. We make this dedication for the benefit
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
+relinquishment in perpetuity of all present and future rights to this
+software under copyright law.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to <http://unlicense.org>
