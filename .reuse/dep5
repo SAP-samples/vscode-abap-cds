@@ -1,0 +1,12 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: vscode-abap-cds
+Upstream-Contact: Frederik Hudak <frederik.hudak@sap.com>
+Source: https://github.com/SAP-samples/vscode-abap-cds
+
+Files: snippets/*
+Copyright: 2019-2020 SAP SE or an SAP affiliate company and vscode-abap-cds contributors
+License: Apache-2.0	
+
+Files: syntaxes/* language-configuration.json package.json .vscodeignore CHANGELOG.md README.md *.png
+Copyright: 2019-2020 SAP SE or an SAP affiliate company and vscode-abap-cds contributors
+License: CC0-1.0
