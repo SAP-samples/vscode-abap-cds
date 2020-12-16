@@ -1,5 +1,6 @@
 # Vscode-ABAP-CDS
 
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/vscode-abap-cds)](https://api.reuse.software/info/github.com/SAP-samples/vscode-abap-cds)
 
 ## Description
 
