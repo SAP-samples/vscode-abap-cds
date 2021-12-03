@@ -124,6 +124,11 @@
 		"comments": {
 			"patterns": [
 				{
+					"name": "comment.line.double-slash.abapcds",
+					"begin": "//",
+					"end": "$"
+				},
+				{
 					"name": "comment.block.abapcds",
 					"begin": "/\\*",
 					"beginCaptures": {
@@ -294,7 +299,8 @@
 							"name": "variable.other.abapcds"
 						}
 					}
-				},				{
+				},
+				{
 					"match": "(?i)(?<=\\s)([/a-z_]+)(?=,\\s?)",
 					"captures": {
 						"1": {
@@ -304,12 +310,12 @@
 				},
 				{
 					"match": "(?i)(?<=\\s)([/a-z_]+)(?=\\s)",
-				"captures": {
-					"1": {
-						"name": "entity.name.type.abapcds"
+					"captures": {
+						"1": {
+							"name": "entity.name.type.abapcds"
+						}
 					}
 				}
-			}
 			]
 		}
 	},
